@@ -118,6 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AnubisMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\AnubisMusic.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Arkanoid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Arkanoid.3dm;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="blade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\blade.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout1Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout1Blue.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout2Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout2Green.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout3Yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout3Yellow.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout4Brown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout4Brown.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout5Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout5Orange.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Breakout6Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Breakout6Red.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BreakoutPad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BreakoutPad.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BreakoutWall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BreakoutWall.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\clin1.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="glasses" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\glasses.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="PantherLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\PantherLogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

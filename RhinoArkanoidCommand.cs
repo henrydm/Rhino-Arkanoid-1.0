@@ -21,6 +21,12 @@ namespace RhinoArkanoid
 
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
+            //if (Game.Playing) Game.Stop();
+            //else Game.Run();
+            // return Result.Success;
+
+            if (Game.Playing) return Result.Cancel;
+            Game.Run();
             var options = new GetOption();
             options.SetCommandPrompt(EnglishName);
 
@@ -29,11 +35,13 @@ namespace RhinoArkanoid
             var indexReset = options.AddOption("Reset");
             var indexExit = options.AddOption("Exit");
 
-            Game.Run();
-            Game.OnStopGame += (o, e) => RhinoApp.SendKeystrokes("!", true);
+
+
+           // Game.OnStopGame += (o, e) => RhinoApp.SendKeystrokes("!", true);
+
             while (Game.Playing)
             {
-                //options.Get();
+                options.Get();
                 var slectedOption = options.Option();
 
                 if (slectedOption?.Index == indexFx)
@@ -55,9 +63,9 @@ namespace RhinoArkanoid
                 }
             }
 
-
-    
             return Result.Success;
+
+
         }
     }
 }

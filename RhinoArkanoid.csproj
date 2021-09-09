@@ -31,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,10 +45,81 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Drawable.cs" />
+    <Compile Include="GameObjects\AnimationObjects\Rotator.cs" />
+    <Compile Include="GameObjects\AnimationObjects\Translator.cs" />
+    <Compile Include="GameObjects\Ball.cs" />
+    <Compile Include="GameObjects\Blocks\Block.cs" />
+    <Compile Include="GameObjects\Blocks\Brick.cs" />
+    <Compile Include="GameObjects\Blocks\Gem.cs" />
+    <Compile Include="GameObjects\CollisionResult.cs" />
+    <Compile Include="GameObjects\Drawable.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameObjects\GameObjBuildInfo.cs" />
+    <Compile Include="GameObjects\Levels\AtariWall.cs" />
+    <Compile Include="GameObjects\Levels\SuperMario.cs" />
+    <Compile Include="GameObjects\PowerUps\BallSpeed.cs" />
+    <Compile Include="GameObjects\PowerUps\ExtraLife.cs" />
+    <Compile Include="GameObjects\AnimationObjects\Animator.cs" />
+    <Compile Include="GameObjects\PowerUps\ResizePad.cs" />
+    <Compile Include="GameObjects\PowerUps\MultiBall.cs" />
+    <Compile Include="GameObjects\AnimationObjects\TxObject.cs" />
+    <Compile Include="GameObjects\IDrawable.cs" />
+    <Compile Include="GameObjects\Levels\AnubisTemple.cs" />
+    <Compile Include="GameObjects\Levels\Level.cs" />
+    <Compile Include="GameObjects\Levels\CustomImage.cs" />
+    <Compile Include="GameObjects\Levels\Atari.cs" />
+    <Compile Include="GameObjects\Pad.cs" />
+    <Compile Include="GameObjects\PowerUps\PowerUp.cs" />
+    <Compile Include="GameObjects\AnimationObjects\TxRotation.cs" />
+    <Compile Include="GameObjects\AnimationObjects\TxTranslation.cs" />
+    <Compile Include="GameObjects\PowerUps\StickyBall.cs" />
+    <Compile Include="GameObjects\Wall.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\ChannelMode.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\IMp3FrameDecompressor.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\Mp3Frame.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\MpegLayer.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\MpegVersion.cs" />
+    <Compile Include="NAudio\NAudio.Core\FileFormats\Mp3\XingHeader.cs" />
+    <Compile Include="NAudio\NAudio.Core\MmException.cs" />
+    <Compile Include="NAudio\NAudio.Core\MmResult.cs" />
+    <Compile Include="NAudio\NAudio.Core\Utils\ByteEncoding.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\AdpcmWaveFormat.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\AudioMediaSubtypes.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\Gsm610WaveFormat.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\Mp3WaveFormat.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\WaveFormat.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\WaveFormatEncoding.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveFormats\WaveFormatExtensible.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveOutputs\IWavePlayer.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveOutputs\IWaveProvider.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveOutputs\IWaveProviderFloat.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveOutputs\PlaybackState.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveOutputs\StoppedEventArgs.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveStreams\Mp3FileReaderBase.cs" />
+    <Compile Include="NAudio\NAudio.Core\Wave\WaveStreams\WaveStream.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmFormatSuggestFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmInterop.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStream.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamConvertFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamHeader.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamHeaderStatusFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamHeaderStruct.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamOpenFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\AcmStreamSizeFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Compression\WaveFilter.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\MmTime.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\WaveHeader.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\WaveHeaderFlags.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\WaveInterop.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\WaveOutCapabilities.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\MmeInterop\WaveOutSupport.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\Mp3FrameDecompressor.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\WaveOutBuffer.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\WaveOutEvent.cs" />
+    <Compile Include="NAudio\NAudio.WinMM\WaveOutUtils.cs" />
+    <Compile Include="NAudio\Mp3FileReader.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -56,6 +128,7 @@
     <Compile Include="RhinoArkanoidCommand.cs" />
     <Compile Include="RhinoArkanoidPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sound.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\plugin-utility.ico" />
@@ -65,7 +138,49 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Arkanoid.3dm" />
+    <None Include="Resources\AtariSmall.ttf" />
+    <None Include="Resources\Mario Wall.3dm" />
     <None Include="Resources\PantherLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\musica.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glasses.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blade.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clin1.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnubisMusic.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout2Green.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout3Yellow.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout4Brown.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout5Orange.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout6Red.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakoutWall.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Breakout1Blue.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BreakoutPad.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -87,5 +202,6 @@ Erase "$(TargetPath)"</PostBuildEvent>
     <StartArguments>
     </StartArguments>
     <StartAction>Program</StartAction>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 </Project>

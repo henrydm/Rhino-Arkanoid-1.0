@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -21,7 +22,7 @@ namespace RhinoArkanoid
         /// <summary>
         /// Get the current presed key
         /// </summary>
-        public static Keys PressedKey;
+        public static List<Keys> PressedKey;
 
         /// <summary>
         /// Process Id which is currently monitoring for keystrokes.
@@ -53,7 +54,7 @@ namespace RhinoArkanoid
         public static void Start()
         {
             if (_hookId != IntPtr.Zero) return;
-            PressedKey = Keys.None;
+            PressedKey = new List<Keys>();
             _hookId = SetHook(Proc);
         }
 
@@ -82,12 +83,13 @@ namespace RhinoArkanoid
 
                 if (wParam == (IntPtr)WM_KEYDOWN)
                 {
-                    PressedKey = (Keys)vkCode;
+                    PressedKey.SafeAdd((Keys)vkCode);
                     OnKeyDown?.Invoke(null, ea);
                 }
                 if (wParam == (IntPtr)WM_KEYUP)
                 {
-                    PressedKey = Keys.None;
+                    PressedKey.SafeRemove((Keys)vkCode);
+                    //PressedKey = Keys.None;
                     OnKeyUp?.Invoke(null, ea);
                 }
                 if (ea.SuppressKeyPress)
